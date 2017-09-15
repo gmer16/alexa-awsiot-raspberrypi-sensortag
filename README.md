@@ -1,4 +1,4 @@
-<img src="images/app-chart.jpg" alt="Smiley face" border="5" width="60%">
+<img src="images/app-chart.jpg" alt="Smiley face" border="5" width="80%">
 
 # Summary
   Alexa Skill to access and visualize on a web page data streamed from a TI SensorTag CC2650 to AWS IoT and Amazon Elasticsearch Service via a Raspberry PI 3 Model B gateway.
@@ -183,7 +183,7 @@ The bridge between the `voice interaction model` and its `Lambda function`is rep
 The `voice interaction model (VIM)` can be viewed in fact as a sort of configuration file for the `AVS`. Thanks to a `VIM` the `AVS` knows for what words and sequences of words to look for whenever an `Amazon Echo` or other enabled devices sends to the `AVS` the actual audio stream recorded for the conversation. The `AVS` receives this audio stream and based on the specification encoded in the `VIM` decides what functions (`handlers`) to activate among those exported by the corresponding `Lambda function`. The `Lambda function` can then call other `AWS services` or services hosted elsewhere as needed.
 I will start first creating a new `skill` through the `Amazon Developer Portal` as shown below:
 
-<img src="images/create-skill.gif" alt="Smiley face" border="5" width="60%">
+<img src="images/create-skill.gif" alt="Smiley face" border="5" width="80%">
 
 ### Voice Interaction Model
 In the case of our `sensortag skill`, the voice interaction model is defined by an `intent schema`,
@@ -270,7 +270,7 @@ aws lambda create-function \
 The `ARN` referred above is the one for the `execution role`, the default one, associated with the function that can be retrieved on the `AWS IAM console` and the `zip` file is the archive that contains the `node.js` script for the function, together with all the libraries it refers to.
 If you're using `AWS Lambda` for the first time you will need to create a basic execution role, as explained in the picture below, and then copy its `ARN` in the file above, otherwise you can use a pre-existing role. 
 
-<img src="images/iam-role-lambda.gif" alt="Smiley face" border="5" width="60%">
+<img src="images/iam-role-lambda.gif" alt="Smiley face" border="5" width="80%">
 
 The `index.js` file can be found under `alexa-amazon-iot/skill/src` in the project tree, together with the `package.json` file that lists its dependencies. The archive for the upload can be built going into the `alexa-amazon-iot/skill/src` folder and running:
 ```shell
@@ -291,12 +291,12 @@ aws lambda update-function-code \
 Save the `ARN` for the function returned by the command above. We will used as as one of the skill configuration options.
 If you create the lambda function through the command line as suggested above you still need to manually select what type of `triggers` can activate it (in our case the Alexa Skill). In theory this is something that should be doable from the `CLI`, but in practice the corresponding command refused to work for me. I had to login into the `AWS Lambda Console`, select the newly created lambda function and manually select the type of trigger that I wanted, as described in the picture below.
 
-<img src="images/select-trigger.gif" alt="Smiley face" border="5" width="60%">
+<img src="images/select-trigger.gif" alt="Smiley face" border="5" width="80%">
 
 ## Web App
 Once the data is available in the `Amazon Elasticsearch service` it can be visualized using the embedded `Kibana` plugin. The visualizations can be fully customized, and once they are saved they have an IP address that can be used to retrieve them. This IP addresses need then to ber copied into the `/alexa-amazon-iot/webapp-thing/js/updateDom.js` file. The picture below shows one possible way to organize some of the sensor's data into a visualization that can be displayed by the web-app. 
 
-<img src="images/kibana.gif" alt="Smiley face" border="5" width="60%">
+<img src="images/kibana.gif" alt="Smiley face" border="5" width="80%">
 
 The public IP address of the machine where the browser is running must be specifically enabled in the access policy document of your `Elasticsearch domain` for the application to work. The web app requires also the creation of a `AWS Cognito Pool`, whose ID needs to be specified in the `/alexa-amazon-iot/webapp-thing/js/aws_config.js` file. Follow the instructions in `/alexa-amazon-iot/webapp-thing/README.md` to do that.
 
