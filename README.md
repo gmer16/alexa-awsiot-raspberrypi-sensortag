@@ -1,6 +1,6 @@
 <img src="images/app-chart.jpg" alt="Smiley face" border="5" width="60%">
 
-# Project Title proposal
+# Summary
   Alexa Skill to access and visualize on a web page data streamed from a TI SensorTag CC2650 to AWS IoT and Amazon Elasticsearch Service via a Raspberry PI 3 Model B gateway.
 # Intro
   The motivation behind this project is to explore possible applications of Amazon Alexa in an industrial/factory environment as a possible worker friendly user interface, especially useful for workers that may not be computer literate.
