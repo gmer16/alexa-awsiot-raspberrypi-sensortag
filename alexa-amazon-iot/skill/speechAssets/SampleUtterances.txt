@@ -1,0 +1,17 @@
+
+SimpleQueryIntent what's the {metric} now
+SimpleQueryIntent tell me what's the {metric} now
+SimpleQueryIntent the {metric} please
+SimpleQueryIntent the latest {metric} please
+SimpleQueryIntent the latest {metric} thankyou
+SimpleQueryIntent {metric}
+HistoricalQueryIntent show me the {metric} history
+HistoricalQueryIntent show me the {metric} histogram
+HistoricalQueryIntent show me a {metric} histogram
+HistoricalQueryIntent give me the recent {metric} values
+HistoricalQueryIntent the {metric} history please
+HistoricalQueryIntent the {metric} history thankyou
+HistoricalQueryIntent {metric} history
+AMAZON.StopIntent ok thankyou
+AMAZON.StopIntent ok
+AMAZON.StopIntent thankyou

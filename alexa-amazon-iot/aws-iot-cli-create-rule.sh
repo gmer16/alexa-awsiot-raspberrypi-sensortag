@@ -1,0 +1,1 @@
+aws iot create-topic-rule --region eu-west-1 --rule-name sensordataToElasticSearch --topic-rule-payload file://aws-iot-rule-to-route-sensor-data-to-elasticsearch-index.json

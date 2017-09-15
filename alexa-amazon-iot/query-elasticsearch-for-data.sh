@@ -1,0 +1,1 @@
+curl -i -X GET '<your es domain endpoint>/<domain name>/_search'

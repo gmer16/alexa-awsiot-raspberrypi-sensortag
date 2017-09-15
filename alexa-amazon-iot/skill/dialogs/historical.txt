@@ -1,0 +1,5 @@
+LaunchRequest
+HistoricalQueryIntent metric=pressure
+HistoricalQueryIntent metric=temperature
+HistoricalQueryIntent metric=humidity
+AMAZON.StopIntent

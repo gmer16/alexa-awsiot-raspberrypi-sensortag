@@ -1,0 +1,12 @@
+{
+    "name": "sensortag-raspberrypi-awsiot",
+    "version": "1.0.0",
+    "dependencies": {
+        "aws-iot-device-sdk": "latest",
+        "sensortag": "latest",
+        "async": "latest",
+        "node-gyp": "latest",
+        "noble": "latest",
+        "util": "latest"
+    }
+}

@@ -1,0 +1,30 @@
+{
+"sql": "SELECT current.state AS state, cast(timestamp as number) * 1000 AS timestampMillis FROM '$aws/things/raspberrypi-gateway/shadow/update/documents'",
+
+"actions": [
+
+{
+
+"elasticsearch": {
+
+"roleArn": "<arn of your iot to es execution role>",
+
+"endpoint": "<your es endpoint>",
+
+"index": "<index name, sensortags in my case>",
+
+"type": "raspberrypi-gateway",
+
+"id": "${newuuid()}"
+
+}
+
+}
+
+],
+
+"ruleDisabled": false,
+
+"awsIotSqlVersion": "2016-03-23-beta"
+
+}

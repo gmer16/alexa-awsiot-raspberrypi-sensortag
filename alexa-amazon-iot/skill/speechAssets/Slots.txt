@@ -1,0 +1,9 @@
+SENSOR_METRIC
+
+temperature
+acceleration
+humidity
+magnetic field
+pressure
+gyroscope
+luminosity

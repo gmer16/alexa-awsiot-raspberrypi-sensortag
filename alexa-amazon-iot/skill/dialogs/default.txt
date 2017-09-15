@@ -1,0 +1,5 @@
+LaunchRequest
+SimpleQueryIntent metric=pressure
+SimpleQueryIntent metric=temperature
+SimpleQueryIntent metric=humidity
+AMAZON.StopIntent

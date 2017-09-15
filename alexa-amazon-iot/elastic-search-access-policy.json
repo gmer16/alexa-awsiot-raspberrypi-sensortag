@@ -1,0 +1,26 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "<arn of the security role that allows aws iot to write into elasticsearch>"
+      },
+      "Action": "es:ESHttpPut",
+      "Resource": "<your elasticsearch domain arn>/*"
+    },
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": "es:*",
+      "Resource": "<your elasticsearch domain arn>/*",
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": "<public ip address of the machine that needs to have access to the data>"
+        }
+      }
+    }
+  ]
+}

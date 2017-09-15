@@ -1,0 +1,1 @@
+curl -XDELETE <your elasticsearch domain endpoint>/<es domain> 

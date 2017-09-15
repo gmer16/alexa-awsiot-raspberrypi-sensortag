@@ -1,0 +1,31 @@
+{
+  "intents": [
+    {
+      "intent": "SimpleQueryIntent",
+      "slots":[
+        {
+          "name":"metric",
+          "type":"SENSOR_METRIC"
+      }
+      ]
+    },
+    {
+      "intent": "HistoricalQueryIntent",
+      "slots":[
+        {
+          "name":"metric",
+          "type":"SENSOR_METRIC"
+      }
+      ]
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
